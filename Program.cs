@@ -22,7 +22,7 @@ namespace Jackbox_Switcher
 			Application.Run(new Form1());
 		}
 
-		internal static void ChangePack(int pack)
+		internal static void ChangePack(int packNumber)
 		{
 			if (steamLocations.Count == 0)
 			{
@@ -40,15 +40,15 @@ namespace Jackbox_Switcher
 				}
 			}
 
-			string PackPath;
+			string packPath;
 
-			if (pack==1)
+			if (packNumber == 1)
 			{
-				PackPath = @"The Jackbox Party Pack\The Jackbox Party Pack.exe";
+				packPath = @"The Jackbox Party Pack\The Jackbox Party Pack.exe";
 			}
 			else
 			{
-				PackPath = String.Format(@"The Jackbox Party Pack {0}\The Jackbox Party Pack {0}.exe", pack);
+				packPath = String.Format(@"The Jackbox Party Pack {0}\The Jackbox Party Pack {0}.exe", packNumber);
 			}
 
 			Process jbProcess = new Process();
@@ -57,7 +57,7 @@ namespace Jackbox_Switcher
 			{
 				try
 				{
-					jbProcess.StartInfo.FileName = steamLocation + PackPath;
+					jbProcess.StartInfo.FileName = steamLocation + packPath;
 					jbProcess.Start();
 					break;
 				}
@@ -74,7 +74,33 @@ namespace Jackbox_Switcher
 			{
 				if (MessageBox.Show("Could not find Jackbox Pack, would you like to add a new steam library location?", "Pack Not Found", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
 				{
-					//TODO: Use Folder browser dialog to find location and add it to library list
+					FolderBrowserDialog folderDialog = new FolderBrowserDialog
+					{
+						ShowNewFolderButton = false,
+						RootFolder = Environment.SpecialFolder.MyComputer,
+						Description = "Navigate and select the \"Steam\" folder location to add to available directories."
+					};
+
+					if (folderDialog.ShowDialog() == DialogResult.OK)
+					{
+						if (!folderDialog.SelectedPath.EndsWith("Steam"))
+						{
+							MessageBox.Show("Unfortunately the folder selected was not the folder called \"Steam\", please try again.", "Invalid Folder Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+							return;
+						}
+
+						String newPath = String.Format("{0}\\steamapps\\common\\", folderDialog.SelectedPath);
+						steamLocations.Add(newPath);
+
+						var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+						config.AppSettings.Settings["steamLocations"].Value = String.Join(",", steamLocations);
+						config.Save(ConfigurationSaveMode.Modified);
+
+						ConfigurationManager.RefreshSection("appSettings");
+
+						MessageBox.Show(String.Format("New path has been added as: \n{0}\nAttempting to launch again", newPath), "Path Added", MessageBoxButtons.OK, MessageBoxIcon.Information);
+						ChangePack(packNumber);
+					}
 				}
 			}
 		}
