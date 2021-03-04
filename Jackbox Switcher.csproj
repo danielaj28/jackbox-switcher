@@ -27,7 +27,7 @@
     <ErrorReportUrl>https://github.com/danielaj28/Jackbox-Switcher/issues</ErrorReportUrl>
     <ProductName>Jackbox Switcher</ProductName>
     <PublisherName>Daniel Ward</PublisherName>
-    <ApplicationRevision>4</ApplicationRevision>
+    <ApplicationRevision>8</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
