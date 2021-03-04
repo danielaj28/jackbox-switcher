@@ -38,12 +38,17 @@ namespace Jackbox_Switcher
 			this.btn5 = new System.Windows.Forms.Button();
 			this.btn6 = new System.Windows.Forms.Button();
 			this.btn7 = new System.Windows.Forms.Button();
+			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+			this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.sendFeedbackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.menuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// btn1
 			// 
 			this.btn1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btn1.Location = new System.Drawing.Point(12, 12);
+			this.btn1.Location = new System.Drawing.Point(12, 27);
 			this.btn1.Name = "btn1";
 			this.btn1.Size = new System.Drawing.Size(66, 46);
 			this.btn1.TabIndex = 1;
@@ -54,7 +59,7 @@ namespace Jackbox_Switcher
 			// btn2
 			// 
 			this.btn2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btn2.Location = new System.Drawing.Point(84, 12);
+			this.btn2.Location = new System.Drawing.Point(84, 27);
 			this.btn2.Name = "btn2";
 			this.btn2.Size = new System.Drawing.Size(66, 46);
 			this.btn2.TabIndex = 2;
@@ -65,7 +70,7 @@ namespace Jackbox_Switcher
 			// btn3
 			// 
 			this.btn3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btn3.Location = new System.Drawing.Point(156, 12);
+			this.btn3.Location = new System.Drawing.Point(156, 27);
 			this.btn3.Name = "btn3";
 			this.btn3.Size = new System.Drawing.Size(66, 46);
 			this.btn3.TabIndex = 3;
@@ -76,7 +81,7 @@ namespace Jackbox_Switcher
 			// btn4
 			// 
 			this.btn4.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btn4.Location = new System.Drawing.Point(228, 12);
+			this.btn4.Location = new System.Drawing.Point(228, 27);
 			this.btn4.Name = "btn4";
 			this.btn4.Size = new System.Drawing.Size(66, 46);
 			this.btn4.TabIndex = 4;
@@ -87,7 +92,7 @@ namespace Jackbox_Switcher
 			// btn5
 			// 
 			this.btn5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btn5.Location = new System.Drawing.Point(300, 12);
+			this.btn5.Location = new System.Drawing.Point(300, 27);
 			this.btn5.Name = "btn5";
 			this.btn5.Size = new System.Drawing.Size(66, 46);
 			this.btn5.TabIndex = 5;
@@ -98,7 +103,7 @@ namespace Jackbox_Switcher
 			// btn6
 			// 
 			this.btn6.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btn6.Location = new System.Drawing.Point(372, 12);
+			this.btn6.Location = new System.Drawing.Point(372, 27);
 			this.btn6.Name = "btn6";
 			this.btn6.Size = new System.Drawing.Size(66, 46);
 			this.btn6.TabIndex = 6;
@@ -109,7 +114,7 @@ namespace Jackbox_Switcher
 			// btn7
 			// 
 			this.btn7.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btn7.Location = new System.Drawing.Point(444, 12);
+			this.btn7.Location = new System.Drawing.Point(444, 27);
 			this.btn7.Name = "btn7";
 			this.btn7.Size = new System.Drawing.Size(66, 46);
 			this.btn7.TabIndex = 7;
@@ -117,11 +122,44 @@ namespace Jackbox_Switcher
 			this.btn7.UseVisualStyleBackColor = true;
 			this.btn7.Click += new System.EventHandler(this.btn7_Click);
 			// 
+			// menuStrip1
+			// 
+			this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.helpToolStripMenuItem});
+			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+			this.menuStrip1.Name = "menuStrip1";
+			this.menuStrip1.Size = new System.Drawing.Size(521, 24);
+			this.menuStrip1.TabIndex = 8;
+			this.menuStrip1.Text = "menuStrip1";
+			// 
+			// helpToolStripMenuItem
+			// 
+			this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sendFeedbackToolStripMenuItem,
+            this.aboutToolStripMenuItem});
+			this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+			this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+			this.helpToolStripMenuItem.Text = "Help";
+			// 
+			// sendFeedbackToolStripMenuItem
+			// 
+			this.sendFeedbackToolStripMenuItem.Name = "sendFeedbackToolStripMenuItem";
+			this.sendFeedbackToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.sendFeedbackToolStripMenuItem.Text = "Send Feedback";
+			this.sendFeedbackToolStripMenuItem.Click += new System.EventHandler(this.sendFeedbackToolStripMenuItem_Click);
+			// 
+			// aboutToolStripMenuItem
+			// 
+			this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+			this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.aboutToolStripMenuItem.Text = "About";
+			this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(523, 71);
+			this.ClientSize = new System.Drawing.Size(521, 83);
 			this.Controls.Add(this.btn7);
 			this.Controls.Add(this.btn6);
 			this.Controls.Add(this.btn5);
@@ -129,12 +167,17 @@ namespace Jackbox_Switcher
 			this.Controls.Add(this.btn3);
 			this.Controls.Add(this.btn2);
 			this.Controls.Add(this.btn1);
+			this.Controls.Add(this.menuStrip1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+			this.MainMenuStrip = this.menuStrip1;
 			this.Name = "Form1";
 			this.Text = "Jackbox Games Pack Switcher";
 			this.Load += new System.EventHandler(this.Form1_Load);
+			this.menuStrip1.ResumeLayout(false);
+			this.menuStrip1.PerformLayout();
 			this.ResumeLayout(false);
+			this.PerformLayout();
 
 		}
 
@@ -151,6 +194,10 @@ namespace Jackbox_Switcher
 		private System.Windows.Forms.Button btn5;
 		private System.Windows.Forms.Button btn6;
 		private System.Windows.Forms.Button btn7;
+		private System.Windows.Forms.MenuStrip menuStrip1;
+		private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem sendFeedbackToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
 	}
 }
 
