@@ -40,31 +40,15 @@ namespace Jackbox_Switcher
 				}
 			}
 
-			String PackPath = "";
+			string PackPath;
 
-			switch (pack)
+			if (pack==1)
 			{
-				case 1:
-					PackPath = @"The Jackbox Party Pack\The Jackbox Party Pack.exe";
-					break;
-				case 2:
-					PackPath = @"The Jackbox Party Pack 2\The Jackbox Party Pack 2.exe";
-					break;
-				case 3:
-					PackPath = @"The Jackbox Party Pack 3\The Jackbox Party Pack 3.exe";
-					break;
-				case 4:
-					PackPath = @"The Jackbox Party Pack 4\The Jackbox Party Pack 4.exe";
-					break;
-				case 5:
-					PackPath = @"The Jackbox Party Pack 5\The Jackbox Party Pack 5.exe";
-					break;
-				case 6:
-					PackPath = @"The Jackbox Party Pack 6\The Jackbox Party Pack 6.exe";
-					break;
-				case 7:
-					PackPath = @"The Jackbox Party Pack 7\The Jackbox Party Pack 7.exe";
-					break;
+				PackPath = @"The Jackbox Party Pack\The Jackbox Party Pack.exe";
+			}
+			else
+			{
+				PackPath = String.Format(@"The Jackbox Party Pack {0}\The Jackbox Party Pack {0}.exe", pack);
 			}
 
 			Process jbProcess = new Process();
