@@ -90,6 +90,13 @@ namespace Jackbox_Switcher
 						}
 
 						String newPath = String.Format("{0}\\steamapps\\common\\", folderDialog.SelectedPath);
+
+						if (steamLocations.Contains(newPath))
+						{
+							MessageBox.Show("Unfortunately the Steam directory selected is already recorded.", "Duplicate Folder Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+							return;
+						}
+
 						steamLocations.Add(newPath);
 
 						var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
