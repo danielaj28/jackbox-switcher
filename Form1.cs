@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Deployment.Application;
 using System.Windows.Forms;
 
 namespace Jackbox_Switcher
@@ -8,6 +9,12 @@ namespace Jackbox_Switcher
 		public Form1()
 		{
 			InitializeComponent();
+
+			if (ApplicationDeployment.IsNetworkDeployed)
+			{
+				this.Text = string.Format("Party Pack Switcher - v{0}",
+					ApplicationDeployment.CurrentDeployment.CurrentVersion.ToString(4));
+			}
 		}
 
 		private void btn1_Click(object sender, EventArgs e)
