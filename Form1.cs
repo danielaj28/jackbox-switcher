@@ -2,7 +2,7 @@
 using System.Deployment.Application;
 using System.Windows.Forms;
 
-namespace Jackbox_Switcher
+namespace Party_Pack_Switcher
 {
 	public partial class Form1 : Form
 	{

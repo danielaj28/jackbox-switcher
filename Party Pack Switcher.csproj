@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{CE18E102-B081-42C5-AD3E-E6EBAE30B25D}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Jackbox_Switcher</RootNamespace>
-    <AssemblyName>Jackbox Switcher</AssemblyName>
+    <RootNamespace>Party_Pack_Switcher</RootNamespace>
+    <AssemblyName>Party Pack Switcher</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -24,9 +24,9 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>false</MapFileExtensions>
     <ErrorReportUrl>https://github.com/danielaj28/Jackbox-Switcher/issues</ErrorReportUrl>
-    <ProductName>Jackbox Switcher</ProductName>
+    <ProductName>Party Pack Switcher</ProductName>
     <PublisherName>Daniel Ward</PublisherName>
-    <ApplicationRevision>12</ApplicationRevision>
+    <ApplicationRevision>15</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -53,10 +53,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Jackbox_Switcher.Program</StartupObject>
+    <StartupObject>
+    </StartupObject>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>favicon.ico</ApplicationIcon>
+    <ApplicationIcon>favicon2.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <SignManifests>true</SignManifests>
@@ -108,6 +109,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Jackbox Switcher_2_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
@@ -125,6 +127,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
+    <Content Include="favicon2.ico" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Jackbox_Switcher
+namespace Party_Pack_Switcher
 {
 	partial class Form1
 	{

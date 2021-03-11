@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Jackbox Switcher")]
+[assembly: AssemblyTitle("Party Pack Switcher")]
 [assembly: AssemblyDescription("Switch between Jackbox party packs with ease")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("danieljaward.com")]
-[assembly: AssemblyProduct("Jackbox Switcher")]
+[assembly: AssemblyProduct("Party Pack Switcher")]
 [assembly: AssemblyCopyright("Copyright ©  2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

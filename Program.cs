@@ -4,7 +4,7 @@ using System.Configuration;
 using System.Diagnostics;
 using System.Windows.Forms;
 
-namespace Jackbox_Switcher
+namespace Party_Pack_Switcher
 {
 	static class Program
 	{
